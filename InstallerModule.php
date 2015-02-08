@@ -8,11 +8,12 @@
 	namespace abhimanyu\installer;
 
 	use abhimanyu\installer\helpers\Configuration;
+	use abhimanyu\installer\helpers\enums\Configuration as Enum;
 	use Yii;
 	use yii\base\Module as BaseModule;
 	use yii\db\Exception;
 
-	class Module extends BaseModule
+	class InstallerModule extends BaseModule
 	{
 		/**
 		 * Checks if database connections works
@@ -50,6 +51,9 @@
 		 */
 		public function setInstalled()
 		{
+			// Set App secret
+			Yii::$app->config->set(Enum::APP_SECRET, md5(uniqid(time(), TRUE)));
+
 			$config                        = Configuration::get();
 			$config['params']['installed'] = TRUE;
 			Configuration::set($config);
