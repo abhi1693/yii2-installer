@@ -1,5 +1,8 @@
 html,
 body {
     height: 100%;
+}
+
+.panel{
     padding-top: 80px;
 }
