@@ -22,7 +22,7 @@
 		public function bootstrap($app)
 		{
 			if (!Yii::$app->params[Enum::APP_INSTALLED]) {
-				Yii::$app->runAction('//install/index');
+				Yii::$app->runAction('//installer/install/index');
 			}
 		}
 	}
