@@ -97,6 +97,11 @@
 							$config['params']['installer']['db']['installer_username'] = $form->username;
 
 							Configuration::set($config);
+
+							// todo make migration better
+							$data = file_get_contents((dirname(__DIR__) . '/migrations/data.sql'));
+							Yii::$app->db->createCommand($data)->execute();
+
 							$success = TRUE;
 
 							return $this->redirect(Yii::$app->urlManager->createUrl('//installer/setup/init'));
