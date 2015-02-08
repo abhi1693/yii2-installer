@@ -37,6 +37,20 @@ ALTER TABLE `cache` ADD PRIMARY KEY (`id`);
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `config`
+--
+
+CREATE TABLE IF NOT EXISTS `config` (
+  `id`    INT(11) NOT NULL AUTO_INCREMENT,
+  `name`  VARCHAR(128) UNIQUE,
+  `value` TEXT
+);
+
+ALTER TABLE `config` ADD PRIMARY KEY (`id`);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -112,6 +126,7 @@ ALTER TABLE `user_profile`
 ADD CONSTRAINT `profile_uid_user_id` FOREIGN KEY (`uid`) REFERENCES `user` (`id`)
   ON DELETE CASCADE
   ON UPDATE CASCADE;
+
 
 /*!40101 SET CHARACTER_SET_CLIENT = @OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS = @OLD_CHARACTER_SET_RESULTS */;
