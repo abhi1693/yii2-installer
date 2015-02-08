@@ -29,7 +29,7 @@ Coming Soon
 
 - [ ] Documentation
 - [ ] Compatibility with other databases
-- [ ] Auto migrate feature
+- [x] Auto migrate feature
 
 #### How to contribute?
 
