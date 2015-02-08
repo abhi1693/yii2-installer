@@ -1,3 +1,12 @@
+v0.0.2
+------
+
+**Date:** 2015-02-08
+
+- Added Auto Migrate Feature [still buggy]
+- Fixed Bugs
+
+
 v0.0.1
 ------
 
