@@ -21,8 +21,5 @@
   },
   "autoload": {
     "psr-4": {"abhimanyu\\installer\\": ""}
-  },
-  "extra": {
-    "bootstrap": "abhimanyu\\installer\\Bootstrap"
   }
 }
