@@ -1,0 +1,22 @@
+{
+    "name": "abhi1693/yii2-installer",
+    "description": "Yii2 installer module for Yii2 app startup kit",
+    "keywords": ["yii", "yii2", "installer"],
+    "type": "yii2-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Abhimanyu Saharan",
+            "email": "abhimanyu@teamvulcans.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": { "abhimanyu\\installer\\": "" }
+    },
+    "extra": {
+        "bootstrap": "abhimanyu\\installer\\Bootstrap"
+    }
+}
