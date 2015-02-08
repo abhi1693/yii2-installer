@@ -28,7 +28,7 @@
 	<body>
 	<?php $this->beginBody() ?>
 	<div class="container"
-	     style="margin: 0 auto;max-width: 700px;">
+	     style="margin: 0 auto;max-width: 700px;padding-top: 80px;">
 		<?= $content ?>
 
 		<div class="text text-center">

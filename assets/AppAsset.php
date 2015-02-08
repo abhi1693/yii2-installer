@@ -16,8 +16,7 @@
 		public $basePath = '@webroot';
 		public $baseUrl  = '@web/assets_b';
 		public $css      = [
-			'font-awesome/css/font-awesome.min.css',
-			'css/site.css'
+			'font-awesome/css/font-awesome.min.css'
 		];
 		public $js       = [
 		];
