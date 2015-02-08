@@ -27,12 +27,12 @@ SET time_zone = "+05:30";
 --
 
 CREATE TABLE IF NOT EXISTS `cache` (
-  `id`     CHAR(128) NOT NULL,
+  `id` CHAR(128) NOT NULL PRIMARY KEY,
   `expire` INT(11),
   `data`   BLOB
-);
-
-ALTER TABLE `cache` ADD PRIMARY KEY (`id`);
+)
+  ENGINE =InnoDB
+  DEFAULT CHARSET =latin1;
 
 -- --------------------------------------------------------
 
@@ -41,12 +41,12 @@ ALTER TABLE `cache` ADD PRIMARY KEY (`id`);
 --
 
 CREATE TABLE IF NOT EXISTS `config` (
-  `id`    INT(11) NOT NULL AUTO_INCREMENT,
+  `id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `name`  VARCHAR(128) UNIQUE,
   `value` TEXT
-);
-
-ALTER TABLE `config` ADD PRIMARY KEY (`id`);
+)
+  ENGINE =InnoDB
+  DEFAULT CHARSET =latin1;
 
 -- --------------------------------------------------------
 
