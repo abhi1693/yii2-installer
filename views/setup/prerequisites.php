@@ -3,8 +3,8 @@
 	/** @var $hasError \abhimanyu\installer\helpers\SystemCheck */
 ?>
 <div class="panel panel-default">
-	<div class="text-center">
-		<h2 class="panel-heading">System Check</h2>
+	<div class="panel-heading">
+		<h2 class="text-center">System Check</h2>
 	</div>
 
 	<div class="panel-body">

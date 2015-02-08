@@ -2,8 +2,8 @@
 	/** @var $model \abhimanyu\installer\models\config\ConfigBasicForm */
 ?>
 <div id="name-form" class="panel panel-default">
-	<div class="text-center">
-		<h2 class="panel-heading">Application's Name</h2>
+	<div class="panel-heading">
+		<h2 class="text-center">Application's Name</h2>
 	</div>
 
 	<div class="panel-body">

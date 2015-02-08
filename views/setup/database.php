@@ -4,8 +4,8 @@
 ?>
 
 <div id="database-form" class="panel panel-default">
-	<div class="text-center">
-		<h2 class="panel-heading">Database Configuration!</h2>
+	<div class="panel-heading">
+		<h2 class="text-center">Database Configuration!</h2>
 	</div>
 	<div class="panel-body">
 		<p>Below you have to enter your database connection details. If you’re not sure about these, please contact your

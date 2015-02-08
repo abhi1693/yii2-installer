@@ -1,8 +1,8 @@
 <div class="panel panel-default">
 
 	<!-- todo: change image url with php code -->
-	<div class="text-center">
-		<h2 class="panel-heading">Setup Wizard</h2>
+	<div class="panel-heading">
+		<h2 class="text-center">Setup Wizard</h2>
 	</div>
 
 	<div class="panel-body  text-center">

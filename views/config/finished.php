@@ -1,6 +1,6 @@
 <div class="panel panel-default">
-	<div class="text-center">
-		<h2 class="panel-heading">Setup Complete</h2>
+	<div class="panel-heading">
+		<h2 class="text-center">Setup Complete</h2>
 	</div>
 	<div class="panel-body text-center">
 		<p class="lead"><strong>Congratulations!</strong> You're done.</p>

@@ -2,8 +2,8 @@
 	/** @var $model */
 ?>
 <div id="create-admin-account-form" class="panel panel-default">
-	<div class="text-center">
-		<h2 class="panel-heading">Admin Account</h2>
+	<div class="panel-heading">
+		<h2 class="text-center">Admin Account</h2>
 	</div>
 
 	<div class="panel-body">
