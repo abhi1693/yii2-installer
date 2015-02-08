@@ -21,9 +21,25 @@ Yii2-Installer provides a web interface for advanced access control, user manage
     - Default Frontend & Backend Theme
 - Stores all the configurations in the file as well as the database
 
-## Documentation
+## Installation
 
-Coming Soon
+This document will guide you through the process of installing Yii2-Installer using **composer**.
+
+Add Yii2-installer to the require section of your **composer.json** file:
+
+```
+{
+    "require": {
+        "abhi1693/yii2-installer": "dev-master"
+    }
+}
+```
+
+And run following command to download extension using **composer**:
+
+```bash
+$ php composer.phar update
+```
 
 ## Roadmap
 
