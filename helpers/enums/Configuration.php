@@ -12,7 +12,7 @@
 		const APP_SECRET         = 'app.secret';
 		const APP_BACKEND_THEME  = 'app.backend.theme';
 		const APP_FRONTEND_THEME = 'app.frontend.theme';
-		const APP_INSTALLED      = 'app.installed';
+		const APP_INSTALLED = 'installed';
 
 		// Cache
 		const CACHE_CLASS       = 'cache.class';
