@@ -9,6 +9,7 @@
 
 	use abhimanyu\installer\helpers\enums\Configuration as Enum;
 	use Yii;
+	use yii\caching\FileCache;
 
 	class Configuration
 	{
@@ -26,7 +27,7 @@
 			// Add Caching
 			$cacheClass = Yii::$app->config->get(Enum::CACHE_CLASS);
 			if (!$cacheClass) {
-				$cacheClass = 'yii\caching\FileCache';
+				$cacheClass = FileCache::className();
 			}
 			$config['components']['cache'] = [
 				'class' => $cacheClass
@@ -42,7 +43,7 @@
 		 */
 		public static function get()
 		{
-			$configFile = Yii::$app->params['dynamicConfigFile'];
+			$configFile = Yii::$app->params[Enum::CONFIG_FILE];
 			$config     = require($configFile);
 
 			if (!is_array($config))
@@ -58,7 +59,7 @@
 		 */
 		public static function set($config = [])
 		{
-			$configFile = Yii::$app->params['dynamicConfigFile'];
+			$configFile = Yii::$app->params[Enum::CONFIG_FILE];
 
 			$content = "<" . "?php return ";
 			$content .= var_export($config, TRUE);

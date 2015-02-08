@@ -20,7 +20,7 @@
 		 *
 		 * @return boolean
 		 */
-		public function checkDbConnection()
+		public static function checkDbConnection()
 		{
 			try {
 				// Check DB Connection
@@ -37,9 +37,9 @@
 		/**
 		 * Checks if the application is already configured.
 		 */
-		public function isConfigured()
+		public static function isConfigured()
 		{
-			if (Yii::$app->config->get('secret') != '') {
+			if (Yii::$app->config->get(Enum::APP_SECRET) != '') {
 				return TRUE;
 			}
 
@@ -49,13 +49,13 @@
 		/**
 		 * Sets application in installed state (disables installer)
 		 */
-		public function setInstalled()
+		public static function setInstalled()
 		{
 			// Set App secret
 			Yii::$app->config->set(Enum::APP_SECRET, md5(uniqid(time(), TRUE)));
 
 			$config                        = Configuration::get();
-			$config['params']['installed'] = TRUE;
+			$config['params'][Enum::APP_INSTALLED] = TRUE;
 			Configuration::set($config);
 		}
 	}

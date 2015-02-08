@@ -7,10 +7,12 @@
 	class Configuration extends BaseEnum
 	{
 		// Basic Configs
-		const APP_NAME   = 'app.name';
-		const APP_TOUR   = 'tour';
-		const APP_SECRET = 'secret';
-		const APP_THEME  = 'theme';
+		const APP_NAME           = 'app.name';
+		const APP_TOUR           = 'app.tour';
+		const APP_SECRET         = 'app.secret';
+		const APP_BACKEND_THEME  = 'app.backend.theme';
+		const APP_FRONTEND_THEME = 'app.frontend.theme';
+		const APP_INSTALLED      = 'app.installed';
 
 		// Cache
 		const CACHE_CLASS       = 'cache.class';
@@ -21,5 +23,8 @@
 		const ADMIN_EMAIL      = 'admin.email';
 
 		// Yii2-User
-		const USER_REGISTRATION = 'user.enableRegister';
+		const USER_REGISTRATION = 'user.enableRegistration';
+
+		// Config File
+		const CONFIG_FILE = 'dynamicConfigFile';
 	}

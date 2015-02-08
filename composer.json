@@ -16,7 +16,8 @@
   ],
   "require": {
     "yiisoft/yii2": "*",
-    "abhi1693/yii2-enum": "*"
+    "abhi1693/yii2-enum": "1.0.0",
+    "abhi1693/yii2-user": "dev-master"
   },
   "autoload": {
     "psr-4": {"abhimanyu\\installer\\": ""}

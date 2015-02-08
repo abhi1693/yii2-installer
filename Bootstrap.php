@@ -7,6 +7,8 @@
 	 */
 	namespace abhimanyu\installer;
 
+	use abhimanyu\installer\helpers\enums\Configuration as Enum;
+	use Yii;
 	use yii\base\Application;
 	use yii\base\BootstrapInterface;
 
@@ -19,6 +21,8 @@
 		 */
 		public function bootstrap($app)
 		{
-			// TODO: Implement bootstrap() method.
+			if (!Yii::$app->params[Enum::APP_INSTALLED]) {
+				Yii::$app->runAction('//install/index');
+			}
 		}
 	}
