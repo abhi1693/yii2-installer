@@ -27,4 +27,7 @@
 
 		// Config File
 		const CONFIG_FILE = 'dynamicConfigFile';
+
+		// Migrations Folder
+		const MIGRATE_FOLDER = 'migrateFolder';
 	}
