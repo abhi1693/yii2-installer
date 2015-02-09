@@ -28,7 +28,7 @@ Add Yii2-installer to the require section of your **composer.json** file:
 ```
 {
     "require": {
-        "abhi1693/yii2-installer": "dev-master"
+        "abhi1693/yii2-installer": "0.0.2"
     }
 }
 ```
