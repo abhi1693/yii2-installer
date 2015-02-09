@@ -151,31 +151,31 @@
 					$config['components']['mail']['transport']['encryption'] = $mailer->encryption;
 
 					// Write config for future use
-					$config['installer']['mail']['transport']['host']       = $mailer->host;
-					$config['installer']['mail']['transport']['username']   = $mailer->username;
-					$config['installer']['mail']['transport']['password']   = $mailer->password;
-					$config['installer']['mail']['transport']['port']       = $mailer->port;
-					$config['installer']['mail']['transport']['encryption'] = $mailer->encryption;
+					$config['params']['installer']['mail']['transport']['host']       = $mailer->host;
+					$config['params']['installer']['mail']['transport']['username']   = $mailer->username;
+					$config['params']['installer']['mail']['transport']['password']   = $mailer->password;
+					$config['params']['installer']['mail']['transport']['port']       = $mailer->port;
+					$config['params']['installer']['mail']['transport']['encryption'] = $mailer->encryption;
 
 					Configuration::set($config);
 
 					return $this->redirect(Yii::$app->urlManager->createUrl('//installer/setup/init'));
 				}
 			} else {
-				if (isset($config['installer']['mail']['transport']['host']))
-					$mailer->host = $config['installer']['mail']['transport']['host'];
+				if (isset($config['params']['installer']['mail']['transport']['host']))
+					$mailer->host = $config['params']['installer']['mail']['transport']['host'];
 
-				if (isset($config['installer']['mail']['transport']['username']))
-					$mailer->username = $config['installer']['mail']['transport']['username'];
+				if (isset($config['params']['installer']['mail']['transport']['username']))
+					$mailer->username = $config['params']['installer']['mail']['transport']['username'];
 
-				if (isset($config['installer']['mail']['transport']['password']))
-					$mailer->password = $config['installer']['mail']['transport']['password'];
+				if (isset($config['params']['installer']['mail']['transport']['password']))
+					$mailer->password = $config['params']['installer']['mail']['transport']['password'];
 
-				if (isset($config['installer']['mail']['transport']['port']))
-					$mailer->port = $config['installer']['mail']['transport']['port'];
+				if (isset($config['params']['installer']['mail']['transport']['port']))
+					$mailer->port = $config['params']['installer']['mail']['transport']['port'];
 
-				if (isset($config['installer']['mail']['transport']['encryption']))
-					$mailer->encryption = $config['installer']['mail']['transport']['encryption'];
+				if (isset($config['params']['installer']['mail']['transport']['encryption']))
+					$mailer->encryption = $config['params']['installer']['mail']['transport']['encryption'];
 			}
 
 			return $this->render('mailer', ['model' => $mailer]);
