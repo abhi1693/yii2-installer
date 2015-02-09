@@ -84,7 +84,7 @@
 			// Application Title
 			Yii::$app->config->set(Enum::APP_NAME, 'Starter Kit');
 			// Application Default Backend Theme
-			Yii::$app->config->set(Enum::APP_BACKEND_THEME, 'default');
+			Yii::$app->config->set(Enum::APP_BACKEND_THEME, 'yeti');
 			// Application Default Frontend Theme
 			Yii::$app->config->set(Enum::APP_FRONTEND_THEME, 'readable');
 
