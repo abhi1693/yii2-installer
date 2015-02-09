@@ -11,10 +11,12 @@
 	use abhimanyu\installer\helpers\Configuration;
 	use abhimanyu\installer\helpers\SystemCheck;
 	use abhimanyu\installer\InstallerModule;
+	use abhimanyu\installer\models\MailerForm;
 	use abhimanyu\installer\models\setup\DatabaseForm;
 	use Yii;
 	use yii\db\Connection;
 	use yii\db\Exception;
+	use yii\swiftmailer\Mailer;
 	use yii\web\Controller;
 	use yii\web\Response;
 	use yii\widgets\ActiveForm;
@@ -92,19 +94,16 @@
 							$config['components']['db']['password'] = $form->password;
 							$config['components']['db']['charset']  = 'utf8';
 
+							// Write config for future use
 							$config['params']['installer']['db']['installer_hostname'] = $form->hostname;
 							$config['params']['installer']['db']['installer_database'] = $form->database;
 							$config['params']['installer']['db']['installer_username'] = $form->username;
 
 							Configuration::set($config);
 
-							// todo make migration better
-							$data = file_get_contents((dirname(__DIR__) . '/migrations/data.sql'));
-							Yii::$app->db->createCommand($data)->execute();
-
 							$success = TRUE;
 
-							return $this->redirect(Yii::$app->urlManager->createUrl('//installer/setup/init'));
+							return $this->redirect(Yii::$app->urlManager->createUrl('//installer/setup/mailer'));
 						} else {
 							$errorMsg = 'Incorrect configuration';
 						}
@@ -127,6 +126,62 @@
 		}
 
 		/**
+		 * @return array|string|\yii\web\Response
+		 */
+		public function actionMailer()
+		{
+			$config = Configuration::get();
+			$mailer = new MailerForm();
+
+			if ($mailer->load(Yii::$app->request->post())) {
+				if (Yii::$app->request->isAjax) {
+					Yii::$app->response->format = Response::FORMAT_JSON;
+
+					return ActiveForm::validate($mailer);
+				}
+
+				if ($mailer->validate()) {
+					// Write Config
+					$config['components']['mail']['class']                   = Mailer::className();
+					$config['components']['mail']['transport']['class']      = 'Swift_SmtpTransport';
+					$config['components']['mail']['transport']['host']       = $mailer->host;
+					$config['components']['mail']['transport']['username']   = $mailer->username;
+					$config['components']['mail']['transport']['password']   = $mailer->password;
+					$config['components']['mail']['transport']['port']       = $mailer->port;
+					$config['components']['mail']['transport']['encryption'] = $mailer->encryption;
+
+					// Write config for future use
+					$config['installer']['mail']['transport']['host']       = $mailer->host;
+					$config['installer']['mail']['transport']['username']   = $mailer->username;
+					$config['installer']['mail']['transport']['password']   = $mailer->password;
+					$config['installer']['mail']['transport']['port']       = $mailer->port;
+					$config['installer']['mail']['transport']['encryption'] = $mailer->encryption;
+
+					Configuration::set($config);
+
+					return $this->redirect(Yii::$app->urlManager->createUrl('//installer/setup/init'));
+				}
+			} else {
+				if (isset($config['installer']['mail']['transport']['host']))
+					$mailer->host = $config['installer']['mail']['transport']['host'];
+
+				if (isset($config['installer']['mail']['transport']['username']))
+					$mailer->username = $config['installer']['mail']['transport']['username'];
+
+				if (isset($config['installer']['mail']['transport']['password']))
+					$mailer->password = $config['installer']['mail']['transport']['password'];
+
+				if (isset($config['installer']['mail']['transport']['port']))
+					$mailer->port = $config['installer']['mail']['transport']['port'];
+
+				if (isset($config['installer']['mail']['transport']['encryption']))
+					$mailer->encryption = $config['installer']['mail']['transport']['encryption'];
+			}
+
+			return $this->render('mailer', ['model' => $mailer]);
+		}
+
+		/**
 		 * The init action imports the database structure & initial data
 		 */
 		public function actionInit()
@@ -139,7 +194,9 @@
 				Yii::$app->cache->flush();
 			}
 
-			//todo Migrate Up the Database
+			// todo make migration better
+			$data = file_get_contents((dirname(__DIR__) . '/migrations/data.sql'));
+			Yii::$app->db->createCommand($data)->execute();
 
 			return $this->redirect(Yii::$app->urlManager->createUrl('//installer/config/index'));
 		}
