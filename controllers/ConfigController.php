@@ -105,11 +105,11 @@
 			Yii::$app->config->set(Enum::USER_REGISTRATION, TRUE);
 
 			// Mailer
-			Yii::$app->config->set(Enum::MAILER_HOST, $config['installer']['mail']['transport']['host']);
-			Yii::$app->config->set(Enum::MAILER_USERNAME, $config['installer']['mail']['transport']['username']);
-			Yii::$app->config->set(Enum::MAILER_PASSWORD, $config['installer']['mail']['transport']['password']);
-			Yii::$app->config->set(Enum::MAILER_PORT, $config['installer']['mail']['transport']['port']);
-			Yii::$app->config->set(Enum::MAILER_ENCRYPTION, $config['installer']['mail']['transport']['encryption']);
+			Yii::$app->config->set(Enum::MAILER_HOST, $config['params']['installer']['mail']['transport']['host']);
+			Yii::$app->config->set(Enum::MAILER_USERNAME, $config['params']['installer']['mail']['transport']['username']);
+			Yii::$app->config->set(Enum::MAILER_PASSWORD, $config['params']['installer']['mail']['transport']['password']);
+			Yii::$app->config->set(Enum::MAILER_PORT, $config['params']['installer']['mail']['transport']['port']);
+			Yii::$app->config->set(Enum::MAILER_ENCRYPTION, $config['params']['installer']['mail']['transport']['encryption']);
 		}
 
 		public function actionBasic()
