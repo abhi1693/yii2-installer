@@ -11,8 +11,8 @@
 	use abhimanyu\installer\helpers\Configuration;
 	use abhimanyu\installer\helpers\SystemCheck;
 	use abhimanyu\installer\InstallerModule;
-	use abhimanyu\installer\models\MailerForm;
 	use abhimanyu\installer\models\setup\DatabaseForm;
+	use abhimanyu\installer\models\setup\MailerForm;
 	use Yii;
 	use yii\db\Connection;
 	use yii\db\Exception;

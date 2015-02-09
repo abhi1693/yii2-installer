@@ -6,7 +6,7 @@
 	 * Time: 19:16
 	 */
 
-	namespace abhimanyu\installer\models;
+	namespace abhimanyu\installer\models\setup;
 
 	use yii\base\Model;
 
