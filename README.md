@@ -6,8 +6,6 @@ Yii2-Installer
 
 Yii2-Installer provides a web interface for advanced access control, user management and includes following features:
 
-> **NOTE:** Module is not yet in alpha version. Use it on your own risk. Some features are missing. Anything can be changed at any time.
-
 **Works only with [Yii2 app advanced startup kit](https://github.com/abhi1693/yii2-app-advanced-startup-kit)**
 
 ## Features
@@ -30,7 +28,7 @@ Add Yii2-installer to the require section of your **composer.json** file:
 ```
 {
     "require": {
-        "abhi1693/yii2-installer": "dev-master"
+        "abhi1693/yii2-installer": "0.0.2"
     }
 }
 ```
