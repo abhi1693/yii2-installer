@@ -25,7 +25,7 @@ This document will guide you through the process of installing Yii2-Installer us
 
 Add Yii2-installer to the require section of your **composer.json** file:
 
-```
+```php
 {
     "require": {
         "abhi1693/yii2-installer": "0.0.2"
