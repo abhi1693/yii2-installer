@@ -15,6 +15,8 @@
 
 	class InstallerModule extends BaseModule
 	{
+		const VERSION = '0.0.3-dev';
+
 		/**
 		 * Checks if database connections works
 		 *
@@ -54,7 +56,7 @@
 			// Set App secret
 			Yii::$app->config->set(Enum::APP_SECRET, md5(uniqid(time(), TRUE)));
 
-			$config                        = Configuration::get();
+			$config = Configuration::get();
 			$config['params'][Enum::APP_INSTALLED] = TRUE;
 			Configuration::set($config);
 		}
