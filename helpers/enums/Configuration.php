@@ -30,4 +30,11 @@
 
 		// Migrations Folder
 		const MIGRATE_FOLDER = 'migrateFolder';
+
+		// Mailer
+		const MAILER_HOST       = 'mail.host';
+		const MAILER_USERNAME   = 'mail.username';
+		const MAILER_PASSWORD   = 'mail.password';
+		const MAILER_PORT       = 'mail.port';
+		const MAILER_ENCRYPTION = 'mail.encryption';
 	}
