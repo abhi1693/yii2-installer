@@ -28,7 +28,7 @@
 
 				// username
 				[['username'], 'required'],
-				[['username'], 'string', 'max' => 255],
+				[['username'], 'email'],
 
 				// password
 				[['password'], 'required'],
@@ -51,7 +51,7 @@
 		{
 			return [
 				'host'             => 'Host',
-				'username'         => 'Email/Username',
+				'username' => 'Email',
 				'password'         => 'Password',
 				'password_confirm' => 'Password Confirm',
 				'port'             => 'Port',

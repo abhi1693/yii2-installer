@@ -6,7 +6,7 @@
 	 * Time: 22:05
 	 */
 
-	/** @var $model \abhimanyu\installer\models\MailerForm */
+	/** @var $model \abhimanyu\installer\models\setup\MailerForm */
 ?>
 <div id="mailer-form" class="panel panel-default">
 	<div class="panel-heading">
@@ -46,7 +46,7 @@
 			<?=
 				$form->field($model, 'password')->passwordInput([
 					                                                'class' => 'form-control'
-				                                                ])->hint('Your Email/Username password') ?>
+				                                                ])->hint('Your Email\'s password') ?>
 		</div>
 
 		<div class="form-group">
