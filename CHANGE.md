@@ -5,6 +5,7 @@ v0.0.2
 
 - Added Auto Migrate Feature [still buggy]
 - Fixed Bugs
+- Fixed Views
 
 
 v0.0.1
