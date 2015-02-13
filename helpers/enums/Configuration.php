@@ -23,7 +23,8 @@
 		const ADMIN_EMAIL      = 'admin.email';
 
 		// Yii2-User
-		const USER_REGISTRATION = 'user.enableRegistration';
+		const USER_REGISTRATION                = 'user.enableRegistration';
+		const USER_PASSWORD_RESET_TOKEN_EXPIRE = 'user.passwordResetTokenExpire';
 
 		// Config File
 		const CONFIG_FILE = 'dynamicConfigFile';
