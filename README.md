@@ -1,6 +1,7 @@
 Yii2-Installer
 ==============
 
+[![Dependency Status](https://www.versioneye.com/user/projects/54e1e6630a910b6b01000241/badge.svg?style=flat)](https://www.versioneye.com/user/projects/54e1e6630a910b6b01000241)
 [![Code Climate](https://codeclimate.com/github/abhi1693/yii2-installer/badges/gpa.svg)](https://codeclimate.com/github/abhi1693/yii2-installer)
 [![Latest Stable Version](https://poser.pugx.org/abhi1693/yii2-installer/v/stable.svg)](https://packagist.org/packages/abhi1693/yii2-installer) [![Total Downloads](https://poser.pugx.org/abhi1693/yii2-installer/downloads.svg)](https://packagist.org/packages/abhi1693/yii2-installer) [![Latest Unstable Version](https://poser.pugx.org/abhi1693/yii2-installer/v/unstable.svg)](https://packagist.org/packages/abhi1693/yii2-installer) [![License](https://poser.pugx.org/abhi1693/yii2-installer/license.svg)](https://packagist.org/packages/abhi1693/yii2-installer)
 
