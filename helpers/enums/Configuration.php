@@ -16,7 +16,6 @@
 
 		// Cache
 		const CACHE_CLASS       = 'cache.class';
-		const CACHE_EXPIRE_TIME = 'cache.expireTime';
 
 		// Admin
 		const ADMIN_INSTALL_ID = 'admin.installationId';

@@ -93,7 +93,6 @@
 
 			// Caching
 			Yii::$app->config->set(Enum::CACHE_CLASS, DbCache::className());
-			Yii::$app->config->set(Enum::CACHE_EXPIRE_TIME, '3600');
 
 			// Admin
 			Yii::$app->config->set(Enum::ADMIN_INSTALL_ID, md5(uniqid('', TRUE)));
