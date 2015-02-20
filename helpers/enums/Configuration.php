@@ -15,7 +15,7 @@
 		const APP_INSTALLED = 'installed';
 
 		// Cache
-		const CACHE_CLASS       = 'cache.class';
+		const CACHE_CLASS = 'cache.class';
 
 		// Admin
 		const ADMIN_INSTALL_ID = 'admin.installationId';
@@ -32,9 +32,10 @@
 		const MIGRATE_FOLDER = 'migrateFolder';
 
 		// Mailer
-		const MAILER_HOST       = 'mail.host';
-		const MAILER_USERNAME   = 'mail.username';
-		const MAILER_PASSWORD   = 'mail.password';
-		const MAILER_PORT       = 'mail.port';
-		const MAILER_ENCRYPTION = 'mail.encryption';
+		const MAILER_USE_TRANSPORT = 'mail.useTransport';
+		const MAILER_HOST          = 'mail.host';
+		const MAILER_USERNAME      = 'mail.username';
+		const MAILER_PASSWORD      = 'mail.password';
+		const MAILER_PORT          = 'mail.port';
+		const MAILER_ENCRYPTION    = 'mail.encryption';
 	}

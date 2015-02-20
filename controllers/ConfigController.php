@@ -105,6 +105,7 @@
 			Yii::$app->config->set(Enum::USER_PASSWORD_RESET_TOKEN_EXPIRE, 86400);
 
 			// Mailer
+			Yii::$app->config->set(Enum::MAILER_USE_TRANSPORT, $config['params']['installer']['mail']['useTransport']);
 			Yii::$app->config->set(Enum::MAILER_HOST, $config['params']['installer']['mail']['transport']['host']);
 			Yii::$app->config->set(Enum::MAILER_USERNAME, $config['params']['installer']['mail']['transport']['username']);
 			Yii::$app->config->set(Enum::MAILER_PASSWORD, $config['params']['installer']['mail']['transport']['password']);
