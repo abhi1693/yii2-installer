@@ -142,13 +142,14 @@
 
 				if ($mailer->validate()) {
 					// Write Config
-					$config['components']['mail']['class']                   = Mailer::className();
-					$config['components']['mail']['transport']['class']      = 'Swift_SmtpTransport';
-					$config['components']['mail']['transport']['host']       = $mailer->host;
-					$config['components']['mail']['transport']['username']   = $mailer->username;
-					$config['components']['mail']['transport']['password']   = $mailer->password;
-					$config['components']['mail']['transport']['port']       = $mailer->port;
-					$config['components']['mail']['transport']['encryption'] = $mailer->encryption;
+					$config['components']['mail']['class']                     = Mailer::className();
+					$config['components']['mail']['transport']['class']        = 'Swift_SmtpTransport';
+					$config['components']['mail']['transport']['useTransport'] = $mailer->useTransport;
+					$config['components']['mail']['transport']['host']         = $mailer->host;
+					$config['components']['mail']['transport']['username']     = $mailer->username;
+					$config['components']['mail']['transport']['password']     = $mailer->password;
+					$config['components']['mail']['transport']['port']         = $mailer->port;
+					$config['components']['mail']['transport']['encryption']   = $mailer->encryption;
 
 					// Write config for future use
 					$config['params']['installer']['mail']['transport']['host']       = $mailer->host;

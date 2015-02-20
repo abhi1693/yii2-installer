@@ -18,6 +18,7 @@
 		public $password_confirm;
 		public $port;
 		public $encryption;
+		public $useTransport;
 
 		public function rules()
 		{
@@ -43,7 +44,11 @@
 				[['port'], 'integer'],
 
 				// encryption
-				[['encryption'], 'string', 'max' => 128]
+				[['encryption'], 'string', 'max' => 128],
+
+				// useTransport
+				['useTransport', 'required'],
+				['useTransport', 'boolean']
 			];
 		}
 
@@ -51,11 +56,12 @@
 		{
 			return [
 				'host'             => 'Host',
-				'username' => 'Email',
+				'username'     => 'Email',
 				'password'         => 'Password',
 				'password_confirm' => 'Password Confirm',
 				'port'             => 'Port',
-				'encryption'       => 'Encryption'
+				'encryption'   => 'Encryption',
+				'useTransport' => 'Use Transport'
 			];
 		}
 	}

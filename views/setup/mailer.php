@@ -74,6 +74,12 @@
 				                                              ])->hint('e.g. tls') ?>
 		</div>
 
+		<div class="form-group">
+			<?= $form->field($model, 'useTransport')->checkbox([
+				                                                   'class' => 'form-control'
+			                                                   ]) ?>
+		</div>
+
 		<hr/>
 
 		<?= \yii\helpers\Html::submitButton('Next', ['class' => 'btn btn-primary']) ?>
