@@ -8,6 +8,7 @@
 
 	namespace abhimanyu\installer\controllers;
 
+	use abhimanyu\installer\helpers\enums\Configuration as Enum;
 	use Yii;
 	use yii\web\Controller;
 	use yii\web\ErrorAction;
@@ -28,6 +29,16 @@
 					'class' => ErrorAction::className(),
 				],
 			];
+		}
+
+		public function beforeAction($action)
+		{
+			// Checks if application has been installed successfully
+			if (Yii::$app->params[Enum::APP_INSTALLED]) {
+				return $this->redirect(Yii::$app->homeUrl);
+			}
+
+			return parent::beforeAction($action);
 		}
 
 		/**

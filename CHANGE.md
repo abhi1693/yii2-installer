@@ -5,6 +5,7 @@ v0.0.3-dev [2015-02-08]
 - Linked Mailer to Database
 - Fixed Typos and Bugs
 - Added useTransport to the mailer component
+- Added Check to see whether the application has been successfully installed
 
 v0.0.2 [2015-02-08]
 -------------------

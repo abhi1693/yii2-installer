@@ -9,6 +9,7 @@
 	namespace abhimanyu\installer\controllers;
 
 	use abhimanyu\installer\helpers\Configuration;
+	use abhimanyu\installer\helpers\enums\Configuration as Enum;
 	use abhimanyu\installer\helpers\SystemCheck;
 	use abhimanyu\installer\InstallerModule;
 	use abhimanyu\installer\models\setup\DatabaseForm;
@@ -24,6 +25,16 @@
 	class SetupController extends Controller
 	{
 		public $layout = 'setup';
+
+		public function beforeAction($action)
+		{
+			// Checks if application has been installed successfully
+			if (Yii::$app->params[Enum::APP_INSTALLED]) {
+				return $this->redirect(Yii::$app->homeUrl);
+			}
+
+			return parent::beforeAction($action);
+		}
 
 		public function actionIndex()
 		{
