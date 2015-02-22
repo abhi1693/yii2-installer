@@ -6,6 +6,7 @@ v0.0.3-dev [2015-02-08]
 - Fixed Typos and Bugs
 - Added useTransport to the mailer component
 - Added Check to see whether the application has been successfully installed
+- Updated View
 
 v0.0.2 [2015-02-08]
 -------------------
