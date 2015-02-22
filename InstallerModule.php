@@ -12,10 +12,39 @@
 	use Yii;
 	use yii\base\Module as BaseModule;
 	use yii\db\Exception;
+	use yii\helpers\Html;
 
 	class InstallerModule extends BaseModule
 	{
 		const VERSION = '0.0.3-dev';
+
+		public static function getAuthor()
+		{
+			return 'Abhimanyu Saharan';
+		}
+
+		public static function getAuthorEmail()
+		{
+			return 'abhimanyu@teamvulcans.com';
+		}
+
+		public static function poweredBy($text = '', $url = '')
+		{
+			if (empty($text)) {
+				$text = 'Powered By Startup-Kit - ' . InstallerModule::getVersion();
+			}
+
+			if (empty($url)) {
+				$url = 'https://github.com/abhi1693/yii2-app-advanced-startup-kit';
+			}
+
+			return Html::a(Html::encode($text), $url);
+		}
+
+		public static function getVersion()
+		{
+			return static::VERSION;
+		}
 
 		/**
 		 * Checks if database connections works

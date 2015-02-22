@@ -7,6 +7,7 @@
 	 */
 
 	use abhimanyu\installer\assets\AppAsset;
+	use abhimanyu\installer\InstallerModule;
 	use yii\helpers\Html;
 
 	/* @var $this \yii\web\View */
@@ -31,8 +32,11 @@
 	     style="margin: 0 auto;max-width: 700px;padding-top: 80px;">
 		<?= $content ?>
 
-		<div class="text text-center">
-			Created by <?= Html::mailto('Abhimanyu Saharan', 'abhimanyu@teamvulcans.com') ?>
+		<div class="text">
+			<p class="pull-left"><?= InstallerModule::poweredBy() ?></p>
+
+			<p class="pull-right">Created
+				By <?= Html::mailto(InstallerModule::getAuthor(), InstallerModule::getAuthorEmail()) ?></p>
 		</div>
 	</div>
 
