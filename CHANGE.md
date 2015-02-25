@@ -1,5 +1,7 @@
-v0.0.3-dev [2015-02-08]
--------------------
+v0.0.3-dev
+----------
+
+**Date: 2015-02-08**
 
 - Added Mailer
 - Linked Mailer to Database
@@ -8,15 +10,19 @@ v0.0.3-dev [2015-02-08]
 - Added Check to see whether the application has been successfully installed
 - Updated View
 
-v0.0.2 [2015-02-08]
--------------------
+v0.0.2
+------
+
+**Date: 2015-02-08**
 
 - Added Auto Migrate Feature [still buggy]
 - Fixed Bugs
 - Fixed Views
 
 
-v0.0.1 [2015-02-08]
--------------------
+v0.0.1
+------
+
+**Date: 2015-02-08**
 
 - Initial Release
