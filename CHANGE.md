@@ -9,6 +9,7 @@ v0.0.3-dev
 - Added useTransport to the mailer component
 - Added Check to see whether the application has been successfully installed
 - Updated View
+- Fixed User table
 
 v0.0.2
 ------
