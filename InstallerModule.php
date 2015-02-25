@@ -16,7 +16,7 @@
 
 	class InstallerModule extends BaseModule
 	{
-		const VERSION = '0.0.3-dev';
+		const VERSION = '0.0.3';
 
 		public static function getAuthor()
 		{
