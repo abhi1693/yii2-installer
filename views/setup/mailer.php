@@ -1,4 +1,6 @@
 <?php
+	use abhimanyu\installer\helpers\enums\Configuration as Enum;
+
 	/**
 	 * Created by PhpStorm.
 	 * User: Abhimanyu
@@ -26,7 +28,7 @@
 		<div class="form-group">
 			<?=
 				$form->field($model, 'host')->textInput([
-					                                        'autofocus'    => 'on',
+					                                        'autofocus' => TRUE,
 					                                        'autocomplete' => 'off',
 					                                        'class'        => 'form-control'
 				                                        ])->hint('You should be able to get this info from your web host.') ?>
@@ -67,17 +69,28 @@
 		</div>
 
 		<div class="form-group">
-			<?=
-				$form->field($model, 'encryption')->textInput([
-					                                              'autocomplete' => 'off',
-					                                              'class'        => 'form-control'
-				                                              ])->hint('e.g. tls') ?>
+			<?= $form->field($model, 'encryption')->dropDownList(
+				[
+					''    => 'Default',
+					'ssl' => 'SSL',
+					'tls' => 'TLS'
+				],
+				[
+					'class'   => 'form-control',
+					'options' =>
+						[
+							Yii::$app->config->get(Enum::MAILER_ENCRYPTION, NULL) =>
+								[
+									'selected ' => TRUE
+								]
+						]
+				]) ?>
 		</div>
 
 		<div class="form-group">
-			<?= $form->field($model, 'useTransport')->checkbox([
-				                                                   'class' => 'form-control'
-			                                                   ]) ?>
+			<div class="checkbox">
+				<?= $form->field($model, 'useTransport')->checkbox() ?>
+			</div>
 		</div>
 
 		<hr/>
