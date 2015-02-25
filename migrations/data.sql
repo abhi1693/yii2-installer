@@ -62,6 +62,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `super_admin`          INT(11)      DEFAULT NULL,
   `status`               INT(11)      NOT NULL,
   `auth_key`             VARCHAR(255) DEFAULT NULL,
+  `activation_token`     VARCHAR (24) DEFAULT NULL ,
   `password_reset_token` VARCHAR(255) DEFAULT NULL,
   `created_at`           DATETIME     NOT NULL,
   `updated_at`           DATETIME     NOT NULL
