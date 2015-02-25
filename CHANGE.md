@@ -10,6 +10,7 @@ v0.0.3-dev
 - Added Check to see whether the application has been successfully installed
 - Updated View
 - Fixed User table
+- Fixed Mailer View
 
 v0.0.2
 ------
