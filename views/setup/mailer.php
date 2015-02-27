@@ -1,5 +1,4 @@
 <?php
-	use abhimanyu\installer\helpers\enums\Configuration as Enum;
 
 	/**
 	 * Created by PhpStorm.
@@ -77,13 +76,6 @@
 				],
 				[
 					'class'   => 'form-control',
-					'options' =>
-						[
-							Yii::$app->config->get(Enum::MAILER_ENCRYPTION, NULL) =>
-								[
-									'selected ' => TRUE
-								]
-						]
 				]) ?>
 		</div>
 
