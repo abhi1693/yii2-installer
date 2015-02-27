@@ -31,8 +31,8 @@ CREATE TABLE IF NOT EXISTS `cache` (
   `expire` INT(11),
   `data`   BLOB
 )
-  ENGINE =InnoDB
-  DEFAULT CHARSET =latin1;
+  ENGINE = InnoDB
+  DEFAULT CHARSET = latin1;
 
 -- --------------------------------------------------------
 
@@ -45,8 +45,8 @@ CREATE TABLE IF NOT EXISTS `config` (
   `name`  VARCHAR(128) UNIQUE,
   `value` TEXT
 )
-  ENGINE =InnoDB
-  DEFAULT CHARSET =latin1;
+  ENGINE = InnoDB
+  DEFAULT CHARSET = latin1;
 
 -- --------------------------------------------------------
 
@@ -62,13 +62,13 @@ CREATE TABLE IF NOT EXISTS `user` (
   `super_admin`          INT(11)      DEFAULT NULL,
   `status`               INT(11)      NOT NULL,
   `auth_key`             VARCHAR(255) DEFAULT NULL,
-  `activation_token`     VARCHAR (24) DEFAULT NULL ,
+  `activation_token` VARCHAR(24) DEFAULT NULL,
   `password_reset_token` VARCHAR(255) DEFAULT NULL,
   `created_at`           DATETIME     NOT NULL,
   `updated_at`           DATETIME     NOT NULL
 )
-  ENGINE =InnoDB
-  DEFAULT CHARSET =latin1;
+  ENGINE = InnoDB
+  DEFAULT CHARSET = latin1;
 
 -- --------------------------------------------------------
 
@@ -81,10 +81,11 @@ CREATE TABLE IF NOT EXISTS `user_profile` (
   `uid`        INT(11)      NOT NULL,
   `name_first` VARCHAR(255) NOT NULL,
   `name_last`  VARCHAR(255) DEFAULT NULL,
-  `sex`        INT(11)      DEFAULT NULL
+  `sex`    INT(11)      DEFAULT NULL,
+  `avatar` VARCHAR(255) DEFAULT NULL
 )
-  ENGINE =InnoDB
-  DEFAULT CHARSET =latin1;
+  ENGINE = InnoDB
+  DEFAULT CHARSET = latin1;
 
 --
 -- Indexes for dumped tables
