@@ -143,7 +143,6 @@
 		{
 			$config = Configuration::get();
 			$mailer = new MailerForm();
-			$mailer->useTransport = Yii::$app->config->get(Enum::MAILER_USE_TRANSPORT) === 'true' ? '1' : '0';
 
 			if ($mailer->load(Yii::$app->request->post())) {
 				if (Yii::$app->request->isAjax) {
