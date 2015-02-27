@@ -29,7 +29,7 @@ Add Yii2-installer to the require section of your **composer.json** file:
 ```php
 {
     "require": {
-        "abhi1693/yii2-installer": "0.0.2"
+        "abhi1693/yii2-installer": "0.0.3"
     }
 }
 ```
