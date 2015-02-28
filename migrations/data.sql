@@ -81,11 +81,13 @@ CREATE TABLE IF NOT EXISTS `user_profile` (
   `uid`        INT(11)      NOT NULL,
   `name_first` VARCHAR(255) NOT NULL,
   `name_last`  VARCHAR(255) DEFAULT NULL,
-  `sex`    INT(11)      DEFAULT NULL,
-  `avatar` VARCHAR(255) DEFAULT NULL
+  `sex` INT(11) DEFAULT NULL
 )
   ENGINE = InnoDB
   DEFAULT CHARSET = latin1;
+
+ALTER TABLE `user_profile` ADD COLUMN `avatar` VARCHAR(255) DEFAULT NULL
+AFTER `sex`;
 
 --
 -- Indexes for dumped tables
