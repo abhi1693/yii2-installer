@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `user_profile` (
   ENGINE = InnoDB
   DEFAULT CHARSET = latin1;
 
-ALTER TABLE `user_profile` ADD COLUMN `avatar` VARCHAR(255) DEFAULT NULL
+ALTER TABLE `user_profile` ADD COLUMN `avatar` VARCHAR(255) DEFAULT '@user/uploads/default_user.jpg'
 AFTER `sex`;
 
 --
