@@ -3,6 +3,7 @@
 	namespace abhimanyu\installer\helpers;
 
 	use Yii;
+	use yii\helpers\Html;
 
 	/**
 	 * SelfTest is a helper class which checks all dependencies of the application.
@@ -136,6 +137,22 @@
 					'title' => $title,
 					'state' => 'ERROR',
 					'hint'  => 'Make ' . Yii::$app->runtimePath . ' writable'
+				];
+			}
+
+			// Check COM support
+			$title = 'PHP COM Support';
+			if (extension_loaded('com_dotnet')) {
+				$checks[] = [
+					'title' => $title,
+					'state' => 'OK'
+				];
+			} else {
+				$checks[] = [
+					'title' => $title,
+					'state' => 'ERROR',
+					'hint'  => 'Install COM extension - ' . Html::a('COM Support', 'http://php.net/manual/en/book.com
+					.php', ['target' => 'blank'])
 				];
 			}
 
