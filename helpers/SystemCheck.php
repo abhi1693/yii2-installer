@@ -140,20 +140,23 @@
 				];
 			}
 
-			// Check COM support
-			$title = 'PHP COM Support';
-			if (extension_loaded('com_dotnet')) {
-				$checks[] = [
-					'title' => $title,
-					'state' => 'OK'
-				];
-			} else {
-				$checks[] = [
-					'title' => $title,
-					'state' => 'ERROR',
-					'hint'  => 'Install COM extension - ' . Html::a('COM Support', 'http://php.net/manual/en/book.com
+			// Only for Windows
+			if (strpos(strtolower(php_uname('s')), 'windows') !== FALSE) {
+				// Check COM support
+				$title = 'PHP COM Support';
+				if (extension_loaded('com_dotnet')) {
+					$checks[] = [
+						'title' => $title,
+						'state' => 'OK'
+					];
+				} else {
+					$checks[] = [
+						'title' => $title,
+						'state' => 'ERROR',
+						'hint'  => 'Install COM extension - ' . Html::a('COM Support', 'http://php.net/manual/en/book.com
 					.php', ['target' => 'blank'])
-				];
+					];
+				}
 			}
 
 			return $checks;
