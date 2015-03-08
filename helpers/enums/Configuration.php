@@ -26,7 +26,8 @@
 		const USER_PASSWORD_RESET_TOKEN_EXPIRE = 'user.passwordResetTokenExpire';
 
 		// Config File
-		const CONFIG_FILE = 'dynamicConfigFile';
+		const CONFIG_FILE  = 'dynamicConfigFile';
+		const MODULES_FILE = 'dynamicModulesFile';
 
 		// Migrations Folder
 		const MIGRATE_FOLDER = 'migrateFolder';
