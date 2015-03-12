@@ -101,8 +101,9 @@
 			Yii::$app->config->set(Enum::APP_TOUR, TRUE);
 
 			// Yii2-User
-			Yii::$app->config->set(Enum::USER_REGISTRATION, TRUE);
+			Yii::$app->config->set(Enum::USER_REGISTRATION, 1);
 			Yii::$app->config->set(Enum::USER_PASSWORD_RESET_TOKEN_EXPIRE, 86400);
+			Yii::$app->config->set(Enum::USER_FORGOT_PASSWORD, 1);
 
 			// Mailer
 			Yii::$app->config->set(Enum::MAILER_USE_TRANSPORT, $config['params']['installer']['mail']['useTransport']);

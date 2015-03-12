@@ -12,7 +12,7 @@
 		const APP_SECRET         = 'app.secret';
 		const APP_BACKEND_THEME  = 'app.backend.theme';
 		const APP_FRONTEND_THEME = 'app.frontend.theme';
-		const APP_INSTALLED = 'installed';
+		const APP_INSTALLED        = 'installed';
 
 		// Cache
 		const CACHE_CLASS = 'cache.class';
@@ -24,6 +24,7 @@
 		// Yii2-User
 		const USER_REGISTRATION                = 'user.enableRegistration';
 		const USER_PASSWORD_RESET_TOKEN_EXPIRE = 'user.passwordResetTokenExpire';
+		const USER_FORGOT_PASSWORD = 'user.enableForgotPassword';
 
 		// Config File
 		const CONFIG_FILE  = 'dynamicConfigFile';
