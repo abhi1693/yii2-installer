@@ -4,6 +4,7 @@ v0.0.4-dev
 **Date: 2015-03-02**
 
 - Added COM Support Check
+- Added User Password Recovery Field
 
 v0.0.3
 ------
