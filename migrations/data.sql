@@ -48,6 +48,8 @@ CREATE TABLE IF NOT EXISTS `config` (
   ENGINE = InnoDB
   DEFAULT CHARSET = latin1;
 
+INSERT INTO `config` (`id`, `name`, `value`) VALUES (NULL, 'user.enablePasswordRecovery', '1');
+
 -- --------------------------------------------------------
 
 --
