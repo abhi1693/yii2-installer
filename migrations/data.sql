@@ -27,7 +27,7 @@ SET time_zone = "+05:30";
 --
 
 CREATE TABLE IF NOT EXISTS `cache` (
-  `id` CHAR(128) NOT NULL PRIMARY KEY,
+  `id`     CHAR(128) NOT NULL PRIMARY KEY,
   `expire` INT(11),
   `data`   BLOB
 )
@@ -41,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `cache` (
 --
 
 CREATE TABLE IF NOT EXISTS `config` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  `id`    INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   `name`  VARCHAR(128) UNIQUE,
   `value` TEXT
 )
@@ -64,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `user` (
   `super_admin`          INT(11)      DEFAULT NULL,
   `status`               INT(11)      NOT NULL,
   `auth_key`             VARCHAR(255) DEFAULT NULL,
-  `activation_token` VARCHAR(24) DEFAULT NULL,
+  `activation_token`     VARCHAR(24)  DEFAULT NULL,
   `password_reset_token` VARCHAR(255) DEFAULT NULL,
   `created_at`           DATETIME     NOT NULL,
   `updated_at`           DATETIME     NOT NULL
@@ -83,13 +83,29 @@ CREATE TABLE IF NOT EXISTS `user_profile` (
   `uid`        INT(11)      NOT NULL,
   `name_first` VARCHAR(255) NOT NULL,
   `name_last`  VARCHAR(255) DEFAULT NULL,
-  `sex` INT(11) DEFAULT NULL
+  `sex`        INT(11)      DEFAULT NULL
 )
   ENGINE = InnoDB
   DEFAULT CHARSET = latin1;
 
 ALTER TABLE `user_profile` ADD COLUMN `avatar` VARCHAR(255) DEFAULT 'vendor/abhi1693/yii2-user/uploads/default_user.jpg'
 AFTER `sex`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `social_account`
+--
+
+CREATE TABLE IF NOT EXISTS `social_account` (
+  `id`        INT(11)      NOT NULL,
+  `uid`       INT(11)      NOT NULL UNIQUE,
+  `provider`  VARCHAR(255) NOT NULL,
+  `client_id` VARCHAR(255) NOT NULL
+)
+  ENGINE = InnoDB
+  DEFAULT CHARSET = latin1;
+
 
 --
 -- Indexes for dumped tables
@@ -106,6 +122,11 @@ ADD PRIMARY KEY (`id`);
 --
 ALTER TABLE `user_profile`
 ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `uid` (`uid`), ADD UNIQUE KEY `uid_index` (`uid`);
+
+--
+-- Indexes for table `social_account`
+--
+ALTER TABLE `social_account` ADD INDEX (`provider`, `client_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables

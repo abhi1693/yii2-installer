@@ -112,6 +112,11 @@
 			Yii::$app->config->set(Enum::MAILER_PASSWORD, $config['params']['installer']['mail']['transport']['password']);
 			Yii::$app->config->set(Enum::MAILER_PORT, $config['params']['installer']['mail']['transport']['port']);
 			Yii::$app->config->set(Enum::MAILER_ENCRYPTION, $config['params']['installer']['mail']['transport']['encryption']);
+
+			// Authentication Clients
+			Yii::$app->config->set(Enum::GOOGLE_AUTH, NULL);
+			Yii::$app->config->set(Enum::FACEBOOK_CLIENT_ID, NULL);
+			Yii::$app->config->set(Enum::FACEBOOK_CLIENT_SECRET, NULL);
 		}
 
 		public function actionBasic()

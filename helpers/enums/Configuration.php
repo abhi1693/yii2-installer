@@ -40,4 +40,9 @@
 		const MAILER_PASSWORD      = 'mail.password';
 		const MAILER_PORT          = 'mail.port';
 		const MAILER_ENCRYPTION    = 'mail.encryption';
+
+		// Authentication Clients
+		const GOOGLE_AUTH            = 'authClientCollection.google';
+		const FACEBOOK_CLIENT_ID     = 'authClientCollection.facebook.clientId';
+		const FACEBOOK_CLIENT_SECRET = 'authClientCollection.facebook.clientSecret';
 	}
