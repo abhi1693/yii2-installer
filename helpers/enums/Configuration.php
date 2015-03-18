@@ -2,9 +2,7 @@
 
 	namespace abhimanyu\installer\helpers\enums;
 
-	use abhimanyu\enum\helpers\BaseEnum;
-
-	class Configuration extends BaseEnum
+	class Configuration
 	{
 		// Basic Configs
 		const APP_NAME           = 'app.name';
