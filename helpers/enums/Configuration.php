@@ -43,6 +43,6 @@
 
 		// Authentication Clients
 		const GOOGLE_AUTH            = 'authClientCollection.google';
-		const FACEBOOK_CLIENT_ID     = 'authClientCollection.facebook.clientId';
-		const FACEBOOK_CLIENT_SECRET = 'authClientCollection.facebook.clientSecret';
+		const GOOGLE_CLIENT_ID     = 'authClientCollection.google.clientId';
+		const GOOGLE_CLIENT_SECRET = 'authClientCollection.google.clientSecret';
 	}

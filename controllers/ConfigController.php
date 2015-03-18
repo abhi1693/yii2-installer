@@ -115,8 +115,8 @@
 
 			// Authentication Clients
 			Yii::$app->config->set(Enum::GOOGLE_AUTH, NULL);
-			Yii::$app->config->set(Enum::FACEBOOK_CLIENT_ID, NULL);
-			Yii::$app->config->set(Enum::FACEBOOK_CLIENT_SECRET, NULL);
+			Yii::$app->config->set(Enum::GOOGLE_CLIENT_ID, NULL);
+			Yii::$app->config->set(Enum::GOOGLE_CLIENT_SECRET, NULL);
 		}
 
 		public function actionBasic()
