@@ -23,6 +23,7 @@ class Configuration
 	const USER_REGISTRATION                = 'user.enableRegistration';
 	const USER_PASSWORD_RESET_TOKEN_EXPIRE = 'user.passwordResetTokenExpire';
 	const USER_FORGOT_PASSWORD             = 'user.enableForgotPassword';
+	const REMEMBER_ME_DURATION = 'user.rememberMeDuration';
 
 	// Config File
 	const CONFIG_FILE  = 'dynamicConfigFile';
@@ -67,7 +68,7 @@ class Configuration
 	const LIVE_CLIENT_SECRET = 'authClientCollection.live.clientSecret';
 
 	// Twitter
-	const TWITTER_AUTH          = 'authClientCollection.twitter';
+	const TWITTER_AUTH = 'authClientCollection.twitter';
 	const TWITTER_CONSUMER_KEY    = 'authClientCollection.twitter.consumerKey';
 	const TWITTER_CONSUMER_SECRET = 'authClientCollection.twitter.consumerSecret';
 }
