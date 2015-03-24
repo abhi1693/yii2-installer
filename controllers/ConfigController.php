@@ -121,6 +121,22 @@ class ConfigController extends Controller
 		Yii::$app->config->set(Enum::FACEBOOK_AUTH, NULL);
 		Yii::$app->config->set(Enum::FACEBOOK_CLIENT_ID, NULL);
 		Yii::$app->config->set(Enum::FACEBOOK_CLIENT_SECRET, NULL);
+
+		Yii::$app->config->set(Enum::LINKED_IN_AUTH, NULL);
+		Yii::$app->config->set(Enum::LINKED_IN_CLIENT_ID, NULL);
+		Yii::$app->config->set(Enum::LINKED_IN_CLIENT_SECRET, NULL);
+
+		Yii::$app->config->set(Enum::GITHUB_AUTH, NULL);
+		Yii::$app->config->set(Enum::GITHUB_CLIENT_ID, NULL);
+		Yii::$app->config->set(Enum::GITHUB_CLIENT_SECRET, NULL);
+
+		Yii::$app->config->set(Enum::LIVE_AUTH, NULL);
+		Yii::$app->config->set(Enum::LIVE_CLIENT_ID, NULL);
+		Yii::$app->config->set(Enum::LIVE_CLIENT_SECRET, NULL);
+
+		Yii::$app->config->set(Enum::TWITTER_AUTH, NULL);
+		Yii::$app->config->set(Enum::TWITTER_CLIENT_ID, NULL);
+		Yii::$app->config->set(Enum::TWITTER_CLIENT_SECRET, NULL);
 	}
 
 	public function actionBasic()

@@ -50,4 +50,25 @@ class Configuration
 	const FACEBOOK_AUTH          = 'authClientCollection.facebook';
 	const FACEBOOK_CLIENT_ID     = 'authClientCollection.facebook.clientId';
 	const FACEBOOK_CLIENT_SECRET = 'authClientCollection.facebook.clientSecret';
+
+	// Linked In
+	const LINKED_IN_AUTH          = 'authClientCollection.linkedIn';
+	const LINKED_IN_CLIENT_ID     = 'authClientCollection.linkedIn.clientId';
+	const LINKED_IN_CLIENT_SECRET = 'authClientCollection.linkedIn.clientSecret';
+
+	// Github
+	const GITHUB_AUTH          = 'authClientCollection.github';
+	const GITHUB_CLIENT_ID     = 'authClientCollection.github.clientId';
+	const GITHUB_CLIENT_SECRET = 'authClientCollection.github.clientSecret';
+
+	// Live
+	const LIVE_AUTH          = 'authClientCollection.live';
+	const LIVE_CLIENT_ID     = 'authClientCollection.live.clientId';
+	const LIVE_CLIENT_SECRET = 'authClientCollection.live.clientSecret';
+
+	// Twitter
+	// Github
+	const TWITTER_AUTH          = 'authClientCollection.twitter';
+	const TWITTER_CLIENT_ID     = 'authClientCollection.twitter.consumerKey';
+	const TWITTER_CLIENT_SECRET = 'authClientCollection.twitter.consumerSecret';
 }
