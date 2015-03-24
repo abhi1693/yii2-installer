@@ -67,8 +67,7 @@ class Configuration
 	const LIVE_CLIENT_SECRET = 'authClientCollection.live.clientSecret';
 
 	// Twitter
-	// Github
 	const TWITTER_AUTH          = 'authClientCollection.twitter';
-	const TWITTER_CLIENT_ID     = 'authClientCollection.twitter.consumerKey';
-	const TWITTER_CLIENT_SECRET = 'authClientCollection.twitter.consumerSecret';
+	const TWITTER_CONSUMER_KEY    = 'authClientCollection.twitter.consumerKey';
+	const TWITTER_CONSUMER_SECRET = 'authClientCollection.twitter.consumerSecret';
 }
