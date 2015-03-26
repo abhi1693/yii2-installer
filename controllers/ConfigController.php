@@ -105,6 +105,7 @@ class ConfigController extends Controller
 		Yii::$app->config->set(Enum::USER_PASSWORD_RESET_TOKEN_EXPIRE, 86400);
 		Yii::$app->config->set(Enum::USER_FORGOT_PASSWORD, 1);
 		Yii::$app->config->set(Enum::REMEMBER_ME_DURATION, 3600);
+		Yii::$app->config->set(Enum::USER_LOGIN_TYPE, 2);
 
 		// Mailer
 		Yii::$app->config->set(Enum::MAILER_USE_TRANSPORT, $config['params']['installer']['mail']['useTransport']);

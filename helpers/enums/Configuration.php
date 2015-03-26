@@ -24,6 +24,7 @@ class Configuration
 	const USER_PASSWORD_RESET_TOKEN_EXPIRE = 'user.passwordResetTokenExpire';
 	const USER_FORGOT_PASSWORD             = 'user.enableForgotPassword';
 	const REMEMBER_ME_DURATION = 'user.rememberMeDuration';
+	const USER_LOGIN_TYPE      = 'user.loginType';
 
 	// Config File
 	const CONFIG_FILE  = 'dynamicConfigFile';
