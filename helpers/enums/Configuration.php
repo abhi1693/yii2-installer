@@ -28,6 +28,7 @@ class Configuration
 
 	// Config File
 	const CONFIG_FILE  = 'dynamicConfigFile';
+	const PARAMS_FILE = 'dynamicParamsFile';
 	const MODULES_FILE = 'dynamicModulesFile';
 
 	// Migrations Folder

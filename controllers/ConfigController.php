@@ -81,8 +81,8 @@ class ConfigController extends Controller
 	 */
 	private function setupInitialData()
 	{
-		// Get Configuration File
-		$config = Configuration::get();
+		// Get Params File
+		$param = Configuration::getParam();
 
 		// Application Title
 		Yii::$app->config->set(Enum::APP_NAME, 'Starter Kit');
@@ -108,12 +108,12 @@ class ConfigController extends Controller
 		Yii::$app->config->set(Enum::USER_LOGIN_TYPE, 2);
 
 		// Mailer
-		Yii::$app->config->set(Enum::MAILER_USE_TRANSPORT, $config['params']['installer']['mail']['useTransport']);
-		Yii::$app->config->set(Enum::MAILER_HOST, $config['params']['installer']['mail']['transport']['host']);
-		Yii::$app->config->set(Enum::MAILER_USERNAME, $config['params']['installer']['mail']['transport']['username']);
-		Yii::$app->config->set(Enum::MAILER_PASSWORD, $config['params']['installer']['mail']['transport']['password']);
-		Yii::$app->config->set(Enum::MAILER_PORT, $config['params']['installer']['mail']['transport']['port']);
-		Yii::$app->config->set(Enum::MAILER_ENCRYPTION, $config['params']['installer']['mail']['transport']['encryption']);
+		Yii::$app->config->set(Enum::MAILER_USE_TRANSPORT, $param['installer']['mail']['useTransport']);
+		Yii::$app->config->set(Enum::MAILER_HOST, $param['installer']['mail']['transport']['host']);
+		Yii::$app->config->set(Enum::MAILER_USERNAME, $param['installer']['mail']['transport']['username']);
+		Yii::$app->config->set(Enum::MAILER_PASSWORD, $param['installer']['mail']['transport']['password']);
+		Yii::$app->config->set(Enum::MAILER_PORT, $param['installer']['mail']['transport']['port']);
+		Yii::$app->config->set(Enum::MAILER_ENCRYPTION, $param['installer']['mail']['transport']['encryption']);
 
 		// Authentication Clients
 		Yii::$app->config->set(Enum::GOOGLE_AUTH, NULL);
