@@ -33,6 +33,9 @@ class Configuration
 			'class' => $cacheClass
 		];
 
+		// Add Auth Clients
+		$config['components']['authClientCollection']['class'] = 'yii\\authclient\\Collection';
+
 		Configuration::set($config);
 	}
 
