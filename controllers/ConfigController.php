@@ -6,6 +6,7 @@ use abhimanyu\installer\helpers\Configuration;
 use abhimanyu\installer\helpers\enums\Configuration as Enum;
 use abhimanyu\installer\InstallerModule;
 use abhimanyu\installer\models\config\ConfigBasicForm;
+use abhimanyu\installer\models\config\RecaptchaForm;
 use abhimanyu\user\models\Profile;
 use abhimanyu\user\models\User;
 use Yii;
@@ -161,11 +162,29 @@ class ConfigController extends Controller
 					Enum::ADMIN_EMAIL => $form->email
 				]);
 
-				return $this->redirect(Yii::$app->urlManager->createUrl('//installer/config/admin'));
+				return $this->redirect(Yii::$app->urlManager->createUrl('//installer/config/recaptcha'));
 			}
 		}
 
 		return $this->render('basic', ['model' => $form]);
+	}
+
+	public function actionRecaptcha()
+	{
+		$model = new RecaptchaForm();
+
+		if ($model->load(Yii::$app->request->post())) {
+			if ($model->validate()) {
+				Yii::$app->config->set([
+					Enum::RECAPTCHA_SITE_KEY, $model->siteKey,
+					Enum::RECAPTCHA_SITE_KEY, $model->secret
+				]);
+
+				return $this->redirect(Yii::$app->urlManager->createUrl('//installer/config/admin'));
+			}
+		}
+
+		return $this->render('recaptcha', ['model' => $model]);
 	}
 
 	/**

@@ -12,6 +12,10 @@ class Configuration
 	const APP_FRONTEND_THEME = 'app.frontend.theme';
 	const APP_INSTALLED      = 'installed';
 
+	// Recaptcha Settings
+	const RECAPTCHA_SITE_KEY = 'recaptcha.site-key';
+	const RECAPTCHA_SECRET   = 'recaptcha.secret';
+
 	// Cache
 	const CACHE_CLASS = 'cache.class';
 
@@ -23,12 +27,12 @@ class Configuration
 	const USER_REGISTRATION                = 'user.enableRegistration';
 	const USER_PASSWORD_RESET_TOKEN_EXPIRE = 'user.passwordResetTokenExpire';
 	const USER_FORGOT_PASSWORD             = 'user.enableForgotPassword';
-	const REMEMBER_ME_DURATION = 'user.rememberMeDuration';
-	const USER_LOGIN_TYPE      = 'user.loginType';
+	const REMEMBER_ME_DURATION             = 'user.rememberMeDuration';
+	const USER_LOGIN_TYPE                  = 'user.loginType';
 
 	// Config File
 	const CONFIG_FILE  = 'dynamicConfigFile';
-	const PARAMS_FILE = 'dynamicParamsFile';
+	const PARAMS_FILE  = 'dynamicParamsFile';
 	const MODULES_FILE = 'dynamicModulesFile';
 
 	// Migrations Folder
@@ -70,7 +74,7 @@ class Configuration
 	const LIVE_CLIENT_SECRET = 'authClientCollection.live.clientSecret';
 
 	// Twitter
-	const TWITTER_AUTH = 'authClientCollection.twitter';
+	const TWITTER_AUTH            = 'authClientCollection.twitter';
 	const TWITTER_CONSUMER_KEY    = 'authClientCollection.twitter.consumerKey';
 	const TWITTER_CONSUMER_SECRET = 'authClientCollection.twitter.consumerSecret';
 }
