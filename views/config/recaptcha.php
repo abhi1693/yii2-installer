@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
 		<h2 class="text-center">Recaptcha Configuration!</h2>
 	</div>
 	<div class="panel-body">
-		<?= $form = ActiveForm::begin([]) ?>
+		<?php $form = ActiveForm::begin([]) ?>
 
 		<div class="form-group">
 			<?= $form->field($model, 'siteKey')->textInput(
@@ -44,6 +44,6 @@ use yii\widgets\ActiveForm;
 
 		<?= Html::submitButton('Save', ['class' => 'btn btn-primary']) ?>
 
-		<?= $form::end() ?>
+		<?php $form::end() ?>
 	</div>
 </div>
