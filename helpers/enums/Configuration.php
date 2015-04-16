@@ -13,8 +13,9 @@ class Configuration
 	const APP_INSTALLED      = 'installed';
 
 	// Recaptcha Settings
-	const RECAPTCHA_SITE_KEY = 'recaptcha.site-key';
-	const RECAPTCHA_SECRET   = 'recaptcha.secret';
+	const RECAPTCHA_SITE_KEY   = 'recaptcha.site-key';
+	const RECAPTCHA_SECRET     = 'recaptcha.secret';
+	const RECAPTCHA_DEBUG_MODE = 'recaptcha.debugMode';
 
 	// Cache
 	const CACHE_CLASS = 'cache.class';
