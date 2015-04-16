@@ -6,6 +6,7 @@ v0.0.4-dev
 - Added COM Support Check
 - Added User Password Recovery Field
 - Added Authentication Clients
+- Added Google Recaptcha
 
 v0.0.3
 ------
