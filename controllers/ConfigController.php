@@ -176,8 +176,8 @@ class ConfigController extends Controller
 		if ($model->load(Yii::$app->request->post())) {
 			if ($model->validate()) {
 				Yii::$app->config->set([
-					Enum::RECAPTCHA_SITE_KEY, $model->siteKey,
-					Enum::RECAPTCHA_SITE_KEY, $model->secret
+					Enum::RECAPTCHA_SITE_KEY => $model->siteKey,
+					Enum::RECAPTCHA_SITE_KEY => $model->secret
 				]);
 
 				return $this->redirect(Yii::$app->urlManager->createUrl('//installer/config/admin'));
