@@ -20,6 +20,7 @@ class RecaptchaForm extends Model
 {
 	public $secret;
 	public $siteKey;
+	public $debugMode;
 
 	public function rules()
 	{
@@ -30,15 +31,19 @@ class RecaptchaForm extends Model
 
 			// Secret
 			['secret', 'required'],
-			['secret', 'string']
+			['secret', 'string'],
+
+			// Debug Mode
+			['debugMode', 'boolean']
 		];
 	}
 
 	public function attributeLabels()
 	{
 		return [
-			'siteKey' => 'Site Key',
-			'secret'  => 'Secret'
+			'siteKey'   => 'Site Key',
+			'secret'    => 'Secret',
+			'debugMode' => 'Debug Mode'
 		];
 	}
 }

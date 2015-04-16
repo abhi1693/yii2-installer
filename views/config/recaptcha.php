@@ -40,6 +40,12 @@ use yii\widgets\ActiveForm;
 			) ?>
 		</div>
 
+		<div class="form-group">
+			<div class="checkbox">
+				<?= $form->field($model, 'debugMode')->checkbox()->hint('By-pass captcha verification') ?>
+			</div>
+		</div>
+
 		<hr>
 
 		<?= Html::submitButton('Save', ['class' => 'btn btn-primary']) ?>
