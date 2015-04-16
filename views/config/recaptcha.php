@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
 		<h2 class="text-center">Recaptcha Configuration!</h2>
 	</div>
 	<div class="panel-body">
-		<?= $form = ActiveForm::begin() ?>
+		<?= $form = ActiveForm::begin([]) ?>
 
 		<div class="form-group">
 			<?= $form->field($model, 'siteKey')->textInput(
