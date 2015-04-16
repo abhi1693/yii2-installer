@@ -1,7 +1,7 @@
-v0.0.4-dev
-----------
+v0.0.4
+------
 
-**Date: 2015-03-02**
+**Date: 2015-04-16**
 
 - Added COM Support Check
 - Added User Password Recovery Field
